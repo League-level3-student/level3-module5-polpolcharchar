@@ -10,15 +10,20 @@ public class _01_Factorial {
      */
     public static int factorial(int n) {
         // 1. If n is zero
-        
+        if(n == 0) {
+        	return 1;
+        }else {
+        	return n * factorial(n - 1);
+        }
             // 2. return 1
         
         // 3. else return n * factorial(n-1)
 
-        return 0;
     }
 
     public static void main(String[] args) {
-        System.out.println("5! is " + factorial(5));
+    	for(int i = 1; i < 16; i++) {
+    		System.out.println(i + "! is " + factorial(i));
+    	}
     }
 }
